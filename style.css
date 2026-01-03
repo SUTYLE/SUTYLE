@@ -68,6 +68,11 @@ a {
     transition: all .2s ease;
 }
 
+.on {
+    background: #FFCDC9;
+    color: #fff;
+}
+
 
 /* BOX */
 .textbox {
@@ -333,4 +338,5 @@ h3 {
     .copy {
         left: 17%;
     }
+
 }
