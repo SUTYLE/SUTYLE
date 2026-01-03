@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUTYLE</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <ul class="nav">
+                <li class="btn tablink" onclick="openBoard(event, 'box02')">LOVE</li>
+                <li class="btn tablink on" onclick="openBoard(event, 'box01')">HOME</li>
+                <li class="btn tablink" onclick="openBoard(event, 'box03')">ETC</li>
+            </ul>
+        </div>
+        <div id="box01" class="textbox board">
+            <div class="home">
+                <div class="hleft">
+                    <div class="me">
+                        <img src="./img/profile.png" alt="profile">
+                        <p>▲ 누군가의 드림주</p>
+                    </div>
+                </div>
+                <div class="hright">
+                    <ul class="section">
+                        <li>
+                            <h3>Profile</h3>
+                            <p>Name : 수정</p>
+                            <p>Nickname : 함</p>
+                        </li>
+                        <li>
+                            <h3>Intro</h3>
+                            <p>일상, 성우 위주 (+애니, 게임)</p>
+                            <p>드림 성향 ○ (언급 없음)</p>
+                        </li>
+                        <li>
+                            <h3>NG</h3>
+                            <p>귀멸의 칼날 - 그림체부터 취향 아님</p>
+                            <p>19+ - 2D,3D 불분하고 남의 살 보고 싶지 않음</p>
+                            <p>무맥락 노체 - 경상도인으로서 못 참음</p>
+                            <p>여성 가슴 얘기 - 죄송하지만 드러움</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="box02" class="textbox board" style="display: none;">
+            <div class="gamebox">
+                <h3>Game</h3>
+                <ul class="gamesec">
+                    <li>
+                        <div class="image">
+                            <img src="./img/cid.png" alt="cid">
+                        </div>
+                        <div class="subname">
+                            <p>엘소드 <br> 둠 브링어</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="./img/cid.png" alt="cid">
+                        </div>
+                        <div class="subname">
+                            <p>테일즈런너 <br> 시드</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="./img/zarb.png" alt="zarb">
+                        </div>
+                        <div class="subname">
+                            <p>테일즈런너 <br> 자브</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="vabox">
+                <h3>Voice Actor</h3>
+                <ul class="vasec">
+                    <li>
+                        <div class="image">
+                            <img src="./img/dai.png" alt="dia">
+                        </div>
+                        <div class="subname">
+                            <p>마스다 <br> 토시키</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="./img/uziro.png" alt="uziro">
+                        </div>
+                        <div class="subname">
+                            <p>우치야마 <br> 코우키</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="anibox">
+                <h3>Anime</h3>
+                <ul class="anisec">
+                    <li>
+                        <div class="image">
+                            <img src="./img/gaku.png" alt="guku">
+                        </div>
+                        <div class="subname">
+                            <p>사카모토 데이즈 <br> 가쿠</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="./img/narumi.png" alt="narumi">
+                        </div>
+                        <div class="subname">
+                            <p>괴수 8호 <br> 나루미 겐</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobsec">
+                <ul class="section">
+                    <li>
+                        <h3>Game</h3>
+                        <p>엘소드 - 둠 브링어</p>
+                        <p>테일즈런너 - 시드, 자브</p>
+                    </li>
+                    <li>
+                        <h3>Voice Actor</h3>
+                        <p>마스다 토시키 <br> - 사쿠마 레이, 엔노시타 치카라, 키요미네 하루카</p>
+                        <p>우치야마 코우키 <br> - 가쿠, 나루미 겐, 츠키시마 케이</p>
+                    </li>
+                    <li>
+                        <h3>Anime</h3>
+                        <p>사카모토 데이즈 - 가쿠</p>
+                        <p>괴수 8호 - 나루미 겐</p>
+                        <p>윈브레 - 토가메 죠</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="box03" class="textbox board" style="display: none;">
+            <h3>Link</h3>
+            <ul class="link">
+                <li>
+                    <a href="https://www.notion.so/29a136722e72808d9d3cd3afa830d885?source=copy_link" target="_blank">
+                        notion
+                    </a>
+                </li>
+                <li>
+                    <a href="https://blog.naver.com/laneeday" target="_blank">
+                        blog
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        //TAB
+        function openBoard(evt, boardName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("board");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" on", "");
+            }
+            document.getElementById(boardName).style.display = "block";
+            evt.currentTarget.className += " on";
+        }
+    </script>
+</body>
+
+</html>
